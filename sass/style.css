@@ -1,0 +1,306 @@
+.btn-gototop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  border: 0.1rem solid gray;
+  cursor: pointer;
+  display: none;
+}
+.btn-gototop.active {
+  display: block;
+}
+.btn-gototop i {
+  font-size: 4rem;
+  color: gray;
+}
+.btn-gototop:hover {
+  border: 0.1rem solid rgb(150, 33, 33);
+  background-color: rgb(150, 33, 33);
+}
+.btn-gototop:hover i {
+  color: white;
+}
+
+.header__top {
+  background-color: black;
+}
+.header__top .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.header__top__hotline {
+  font-size: 1.3rem;
+}
+.header__top__hotline i {
+  font-size: 1.6rem;
+}
+.header__top__support-list {
+  display: flex;
+}
+.header__top__support-item:not(:first-child) {
+  margin-left: 1rem;
+  border-left: 0.1rem solid gray;
+  padding-left: 1rem;
+}
+.header__top__support-link {
+  font-size: 1.3rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.header__top__support-link:hover {
+  color: red;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 31rem;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.header__right__navbar {
+  display: flex;
+}
+.header__right__navbar-item {
+  width: 10rem;
+  position: relative;
+}
+.header__right__navbar-item:not(:first-child) {
+  margin-left: 3rem;
+}
+.header__right__navbar-item:hover .header__right__navbar-link {
+  color: red;
+}
+.header__right__navbar-item:hover .header__right__navbar__level {
+  display: block;
+}
+.header__right__navbar__level {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: -5rem;
+  background-color: white;
+  border: 0.1rem solid gray;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  width: 20rem;
+}
+.header__right__navbar__level--item {
+  text-align: center;
+  padding: 1rem 0;
+}
+.header__right__navbar__level--item:not(:first-child) {
+  border-top: 0.1rem solid rgb(175, 174, 174);
+}
+.header__right__navbar__level--item:hover {
+  background-color: gray;
+}
+.header__right__navbar__level--item:hover .header__right__navbar__level--link {
+  color: white;
+}
+.header__right__navbar__level--link {
+  display: block;
+  font-size: 1.4rem;
+  color: #222;
+}
+.header__right__navbar__level:before {
+  content: " ";
+  display: table;
+  position: absolute;
+  top: -2rem;
+  height: 2rem;
+  width: 100%;
+}
+.header__right__navbar__level:after {
+  content: " ";
+  display: table;
+  position: absolute;
+  top: -0.5rem;
+  left: 44%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: gray;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.header__right__navbar-link {
+  font-size: 1.6rem;
+  color: #222;
+  text-align: center;
+  display: block;
+}
+.header__right__icon {
+  margin-left: 2rem;
+  display: flex;
+}
+.header__right__icon-cart {
+  position: relative;
+}
+.header__right__icon-cart .btn-cart {
+  cursor: pointer;
+}
+.header__right__icon-cart .cart__box {
+  position: absolute;
+  left: -50%;
+  top: 6rem;
+  display: none;
+  width: 40rem;
+  max-height: 76rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+.header__right__icon-cart .cart__box.active {
+  display: block;
+}
+.header__right__icon-cart .cart__box::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: 12%;
+  width: 2rem;
+  height: 2rem;
+  background: gray;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.header__right__icon-cart .cart__box__title {
+  font-size: 1.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222;
+  padding: 1rem;
+  border-bottom: 0.1rem solid gray;
+}
+.header__right__icon-cart .cart__box__list {
+  padding: 1rem 0;
+  max-height: 60rem;
+  overflow: auto;
+}
+.header__right__icon-cart .cart__box__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.header__right__icon-cart .cart__box__item:not(:first-child) {
+  margin-top: 2rem;
+}
+.header__right__icon-cart .cart__box__item img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  object-position: center;
+}
+.header__right__icon-cart .cart__box__item__content {
+  margin-left: 1rem;
+}
+.header__right__icon-cart .cart__box__item__name {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+.header__right__icon-cart .cart__box__item__cost {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.header__right__icon-cart .cart__box__item__quarity {
+  width: 6rem;
+  padding: 0.5rem;
+  outline-color: red;
+}
+.header__right__icon-cart .cart__box__item__trash {
+  margin-left: auto;
+  padding: 1rem;
+  border: 0.1rem solid gray;
+  background: transparent;
+  color: gray;
+  transition: all 0.3s ease;
+}
+.header__right__icon-cart .cart__box__item__trash:hover {
+  border: 0.1rem solid black;
+  background: black;
+  color: white;
+}
+.header__right__icon-cart .cart__box__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.1rem solid gray;
+  padding: 1rem 0;
+}
+.header__right__icon-cart .cart__box__total__title {
+  font-size: 1.6rem;
+}
+.header__right__icon-cart .cart__box__total__number {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.header__right__icon-cart .cart__box__buy {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.6rem;
+  color: gray;
+  background-color: transparent;
+  border: 0.1rem solid gray;
+  transition: all 0.4s ease;
+}
+.header__right__icon-cart .cart__box__buy:hover {
+  color: white;
+  background-color: black;
+  border: 0.1rem solid black;
+}
+.header__right__icon-search {
+  position: relative;
+  cursor: pointer;
+}
+.header__right__icon-search .search {
+  display: none;
+  position: absolute;
+  bottom: -3rem;
+  padding: 0.5rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.header__right__icon-search .search.active {
+  display: block;
+}
+.header__right__icon-search .search:after {
+  content: " ";
+  display: table;
+  position: absolute;
+  top: -1rem;
+  width: 100%;
+  height: 2rem;
+  background-color: #000;
+}
+
+.btn {
+  width: 6rem;
+  height: 6rem;
+  padding: 0 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
