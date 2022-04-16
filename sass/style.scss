@@ -103,6 +103,7 @@
                 border:0.1rem solid gray;
                 box-shadow:0 0 2rem rgba(0,0,0,0.3);
                 width: 20rem;
+                z-index: 9;
                 &--item{
                     text-align: center;
                     padding:1rem 0;
@@ -133,12 +134,12 @@
                     content: " ";
                     display: table;
                     position: absolute;
-                    top:-0.5rem;
-                    left:44%;
+                    top:-1rem;
+                    left:42%;
                     transform:translateX(-50%);
                     width:3rem;
                     height:3rem;
-                    background:gray;;
+                    background:white;
                     transform: rotate(45deg);
                     z-index: -1;
                 }
@@ -305,4 +306,121 @@
     width:6rem;
     height:6rem;
     padding:0 1rem;
+}
+
+.brcurmb{
+    background-color:rgb(196, 196, 196);
+    a,span{
+        font-size: 1.5rem;
+        color:#222;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+.contain__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    border-bottom: 0.1rem dashed gray;
+    &__title{
+        font-size: 3rem;
+    }
+    button{
+        background-color:transparent;
+        border:none;
+        width:5rem;
+        padding:1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:not(:first-child){
+            margin-left:1rem;
+        }
+        i{
+            font-size:3rem
+        }
+        &:hover{
+            color:red;
+        }
+        &.active{
+            i{
+                color:red;
+            }
+        }
+    }
+}
+
+.contain__main{
+    display:flex;
+    &__lists{
+        flex:1;
+        margin:2rem -2rem;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        width:calc(33.33% - 4rem);
+        position: relative;
+        margin:2rem;
+        overflow:hidden;
+        transition: all 0.3s ease;
+        &__photoLarge{
+            width:100%;
+            object-fit: contain;
+        }
+        &__photoSmall{
+            width:5rem;
+            object-fit: contain;
+        }
+        &__name{
+            font-size: 1.5rem;
+            padding:0 1rem;
+        }
+        &__cost{
+            padding:1rem;
+            font-size: 1.7rem;
+        }
+        &:hover{
+            .overlay {
+                top:0;
+            }
+        }
+        .overlay{
+            position:absolute;
+            top:60rem;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color:rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            .btn-addCart{
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%,-50%);
+                width:10rem;
+                height:10rem;
+                background-color:transparent;
+                border-radius: 50%;
+                border:0.1rem solid gray;
+                color:gray;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                &:hover{
+                    border:0.1rem solid rgba(225, 228, 225, 0.8);;
+                    background-color:rgba(206, 206, 206, 0.8);
+                    color:white;
+                }
+
+            }
+        }
+    }
+    &__sideBar{
+        flex:0.4;
+    }
 }
